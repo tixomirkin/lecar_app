@@ -84,10 +84,10 @@
             // tabPage2
             // 
             tabPage2.Controls.Add(richTextBox2);
-            tabPage2.Location = new Point(8, 46);
+            tabPage2.Location = new Point(8, 50);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(705, 683);
+            tabPage2.Size = new Size(705, 679);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Рекомендации";
             tabPage2.UseVisualStyleBackColor = true;
@@ -97,16 +97,16 @@
             richTextBox2.Dock = DockStyle.Fill;
             richTextBox2.Location = new Point(3, 3);
             richTextBox2.Name = "richTextBox2";
-            richTextBox2.Size = new Size(699, 677);
+            richTextBox2.Size = new Size(699, 673);
             richTextBox2.TabIndex = 2;
             richTextBox2.Text = "";
             // 
             // tabPage3
             // 
             tabPage3.Controls.Add(richTextBox3);
-            tabPage3.Location = new Point(8, 46);
+            tabPage3.Location = new Point(8, 50);
             tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(705, 683);
+            tabPage3.Size = new Size(705, 679);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Примечания";
             tabPage3.UseVisualStyleBackColor = true;
@@ -116,7 +116,7 @@
             richTextBox3.Dock = DockStyle.Fill;
             richTextBox3.Location = new Point(0, 0);
             richTextBox3.Name = "richTextBox3";
-            richTextBox3.Size = new Size(705, 683);
+            richTextBox3.Size = new Size(705, 679);
             richTextBox3.TabIndex = 2;
             richTextBox3.Text = "";
             // 
@@ -184,7 +184,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label4.Location = new Point(36, 482);
+            label4.Location = new Point(26, 448);
             label4.Name = "label4";
             label4.Size = new Size(64, 27);
             label4.TabIndex = 11;
@@ -194,7 +194,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label5.Location = new Point(26, 349);
+            label5.Location = new Point(26, 339);
             label5.Name = "label5";
             label5.Size = new Size(64, 27);
             label5.TabIndex = 12;

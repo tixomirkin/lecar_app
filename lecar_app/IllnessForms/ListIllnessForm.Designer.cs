@@ -47,8 +47,10 @@
             symptoms_text = new RichTextBox();
             label2 = new Label();
             label6 = new Label();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)illnessBindingSource).BeginInit();
             panel_ill.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // illness_list_box
@@ -257,11 +259,20 @@
             label6.TabIndex = 7;
             label6.Text = "Поиск";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(393, 64);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(71, 63);
+            pictureBox1.TabIndex = 8;
+            pictureBox1.TabStop = false;
+            // 
             // ListIllnessForm
             // 
             AutoScaleDimensions = new SizeF(18F, 36F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1188, 825);
+            Controls.Add(pictureBox1);
             Controls.Add(label6);
             Controls.Add(panel_ill);
             Controls.Add(label1);
@@ -276,6 +287,7 @@
             ((System.ComponentModel.ISupportInitialize)illnessBindingSource).EndInit();
             panel_ill.ResumeLayout(false);
             panel_ill.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -300,5 +312,6 @@
         private RichTextBox rec_med_text;
         private Label label6;
         private BindingSource illnessBindingSource;
+        private PictureBox pictureBox1;
     }
 }
