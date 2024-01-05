@@ -32,16 +32,17 @@
             med_btn = new Button();
             button3 = new Button();
             button4 = new Button();
-            button5 = new Button();
+            add_jurnal_btn = new Button();
             button6 = new Button();
             label1 = new Label();
             SuspendLayout();
             // 
             // illness_btn
             // 
-            illness_btn.Location = new Point(167, 340);
+            illness_btn.Location = new Point(19, 432);
+            illness_btn.Margin = new Padding(4, 4, 4, 4);
             illness_btn.Name = "illness_btn";
-            illness_btn.Size = new Size(241, 46);
+            illness_btn.Size = new Size(492, 61);
             illness_btn.TabIndex = 0;
             illness_btn.Text = "База болезней";
             illness_btn.UseVisualStyleBackColor = true;
@@ -49,9 +50,10 @@
             // 
             // med_btn
             // 
-            med_btn.Location = new Point(167, 405);
+            med_btn.Location = new Point(19, 512);
+            med_btn.Margin = new Padding(4, 4, 4, 4);
             med_btn.Name = "med_btn";
-            med_btn.Size = new Size(241, 46);
+            med_btn.Size = new Size(492, 61);
             med_btn.TabIndex = 1;
             med_btn.Text = "База лекарств";
             med_btn.UseVisualStyleBackColor = true;
@@ -59,36 +61,41 @@
             // 
             // button3
             // 
-            button3.Location = new Point(67, 531);
+            button3.Location = new Point(19, 596);
+            button3.Margin = new Padding(4, 4, 4, 4);
             button3.Name = "button3";
-            button3.Size = new Size(208, 46);
+            button3.Size = new Size(242, 61);
             button3.TabIndex = 2;
             button3.Text = "О программе";
             button3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            button4.Location = new Point(322, 531);
+            button4.Location = new Point(269, 596);
+            button4.Margin = new Padding(4, 4, 4, 4);
             button4.Name = "button4";
-            button4.Size = new Size(150, 46);
+            button4.Size = new Size(242, 61);
             button4.TabIndex = 3;
             button4.Text = "Выход";
             button4.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // add_jurnal_btn
             // 
-            button5.Location = new Point(174, 176);
-            button5.Name = "button5";
-            button5.Size = new Size(234, 46);
-            button5.TabIndex = 4;
-            button5.Text = "Новая запись";
-            button5.UseVisualStyleBackColor = true;
+            add_jurnal_btn.Location = new Point(19, 276);
+            add_jurnal_btn.Margin = new Padding(4, 4, 4, 4);
+            add_jurnal_btn.Name = "add_jurnal_btn";
+            add_jurnal_btn.Size = new Size(492, 61);
+            add_jurnal_btn.TabIndex = 4;
+            add_jurnal_btn.Text = "Новая запись";
+            add_jurnal_btn.UseVisualStyleBackColor = true;
+            add_jurnal_btn.Click += add_jurnal_btn_Click;
             // 
             // button6
             // 
-            button6.Location = new Point(210, 255);
+            button6.Location = new Point(19, 357);
+            button6.Margin = new Padding(4, 4, 4, 4);
             button6.Name = "button6";
-            button6.Size = new Size(150, 46);
+            button6.Size = new Size(492, 61);
             button6.TabIndex = 5;
             button6.Text = "Журнал";
             button6.UseVisualStyleBackColor = true;
@@ -96,27 +103,29 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(174, 36);
+            label1.Location = new Point(130, 53);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(220, 27);
+            label1.Size = new Size(287, 36);
             label1.TabIndex = 6;
             label1.Text = "Добро пожаловать";
             // 
             // MainMenuForm
             // 
-            AutoScaleDimensions = new SizeF(14F, 27F);
+            AutoScaleDimensions = new SizeF(18F, 36F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(587, 634);
+            ClientSize = new Size(538, 685);
             Controls.Add(label1);
             Controls.Add(button6);
-            Controls.Add(button5);
+            Controls.Add(add_jurnal_btn);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(med_btn);
             Controls.Add(illness_btn);
-            Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(4, 4, 4, 4);
             Name = "MainMenuForm";
             Text = "MainMenuForm";
             ResumeLayout(false);
@@ -129,7 +138,7 @@
         private Button med_btn;
         private Button button3;
         private Button button4;
-        private Button button5;
+        private Button add_jurnal_btn;
         private Button button6;
         private Label label1;
     }

@@ -1,4 +1,5 @@
 ﻿using lecar_app.IllnessForms;
+using lecar_app.JurnalForms;
 using lecar_app.MedForms;
 using System;
 using System.Collections.Generic;
@@ -33,6 +34,12 @@ namespace lecar_app
             var listmedform = new MedListForms();
             listmedform.ShowDialog();
             this.Show();
+        }
+
+        private void add_jurnal_btn_Click(object sender, EventArgs e)
+        {
+            var jurnal_form = new JurnalAddForm();
+            jurnal_form.ShowDialog();
         }
     }
 }
