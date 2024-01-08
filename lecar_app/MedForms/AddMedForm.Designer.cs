@@ -31,7 +31,7 @@
             panel1 = new Panel();
             med_counter = new NumericUpDown();
             label1 = new Label();
-            med_list_box = new ListBox();
+            ill_list_box = new ListBox();
             button2 = new Button();
             add_med_btn = new Button();
             cancel_btn = new Button();
@@ -49,7 +49,7 @@
             // 
             panel1.Controls.Add(med_counter);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(med_list_box);
+            panel1.Controls.Add(ill_list_box);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(add_med_btn);
             panel1.Controls.Add(cancel_btn);
@@ -85,15 +85,16 @@
             label1.TabIndex = 13;
             label1.Text = "Колличество лекарства на складе";
             // 
-            // med_list_box
+            // ill_list_box
             // 
-            med_list_box.FormattingEnabled = true;
-            med_list_box.ItemHeight = 15;
-            med_list_box.Location = new Point(15, 248);
-            med_list_box.Margin = new Padding(2, 1, 2, 1);
-            med_list_box.Name = "med_list_box";
-            med_list_box.Size = new Size(309, 64);
-            med_list_box.TabIndex = 12;
+            ill_list_box.DisplayMember = "name";
+            ill_list_box.FormattingEnabled = true;
+            ill_list_box.ItemHeight = 15;
+            ill_list_box.Location = new Point(15, 248);
+            ill_list_box.Margin = new Padding(2, 1, 2, 1);
+            ill_list_box.Name = "ill_list_box";
+            ill_list_box.Size = new Size(309, 64);
+            ill_list_box.TabIndex = 12;
             // 
             // button2
             // 
@@ -116,6 +117,7 @@
             add_med_btn.TabIndex = 10;
             add_med_btn.Text = "+";
             add_med_btn.UseVisualStyleBackColor = true;
+            add_med_btn.Click += add_med_btn_Click;
             // 
             // cancel_btn
             // 
@@ -214,7 +216,7 @@
         #endregion
 
         private Panel panel1;
-        private ListBox med_list_box;
+        private ListBox ill_list_box;
         private Button button2;
         private Button add_med_btn;
         private Button cancel_btn;

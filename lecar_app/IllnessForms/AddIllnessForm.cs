@@ -13,11 +13,9 @@ namespace lecar_app.IllnessForms
 {
     public partial class AddIllnessForm : Form
     {
-        int id_illnes;
-        public AddIllnessForm(int id_illnes)
+        public AddIllnessForm()
         {
             InitializeComponent();
-            this.id_illnes = id_illnes;
         }
 
         private void add_med_btn_Click(object sender, EventArgs e)
@@ -59,12 +57,13 @@ namespace lecar_app.IllnessForms
             db.Illnesses.Add(new_ill);
             db.SaveChanges();
 
+
             foreach (var temp in illness_list_box.Items)
             {
                 Con ill_con_med = new Con();
                 var med = (Medicament)temp;
                 ill_con_med.IdMedicament = med.Id;
-                ill_con_med.IdIllnes = id_illnes;
+                ill_con_med.IdIllnes = new_ill.Id;
                 db.Cons.Add(ill_con_med);
                 db.SaveChanges();
             }

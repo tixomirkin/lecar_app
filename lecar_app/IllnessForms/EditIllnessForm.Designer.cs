@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            rec_text = new RichTextBox();
             illness_list_box = new ListBox();
             button2 = new Button();
-            button1 = new Button();
+            add_med_btn = new Button();
             cancel_btn = new Button();
             label5 = new Label();
             save_illness_btn = new Button();
@@ -40,7 +41,6 @@
             name_text = new RichTextBox();
             symptoms_text = new RichTextBox();
             label2 = new Label();
-            rec_text = new RichTextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -49,7 +49,7 @@
             panel1.Controls.Add(rec_text);
             panel1.Controls.Add(illness_list_box);
             panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(add_med_btn);
             panel1.Controls.Add(cancel_btn);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(save_illness_btn);
@@ -64,8 +64,21 @@
             panel1.Size = new Size(368, 379);
             panel1.TabIndex = 8;
             // 
+            // rec_text
+            // 
+            rec_text.BackColor = Color.FromArgb(192, 255, 192);
+            rec_text.BorderStyle = BorderStyle.FixedSingle;
+            rec_text.Font = new Font("Arial", 10.1F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            rec_text.Location = new Point(15, 174);
+            rec_text.Margin = new Padding(2, 1, 2, 1);
+            rec_text.Name = "rec_text";
+            rec_text.Size = new Size(344, 65);
+            rec_text.TabIndex = 13;
+            rec_text.Text = "";
+            // 
             // illness_list_box
             // 
+            illness_list_box.DisplayMember = "name";
             illness_list_box.FormattingEnabled = true;
             illness_list_box.ItemHeight = 15;
             illness_list_box.Location = new Point(15, 267);
@@ -84,17 +97,19 @@
             button2.TabIndex = 11;
             button2.Text = "-";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
-            // button1
+            // add_med_btn
             // 
-            button1.Font = new Font("Arial", 9F);
-            button1.Location = new Point(326, 267);
-            button1.Margin = new Padding(2, 1, 2, 1);
-            button1.Name = "button1";
-            button1.Size = new Size(30, 24);
-            button1.TabIndex = 10;
-            button1.Text = "+";
-            button1.UseVisualStyleBackColor = true;
+            add_med_btn.Font = new Font("Arial", 9F);
+            add_med_btn.Location = new Point(326, 267);
+            add_med_btn.Margin = new Padding(2, 1, 2, 1);
+            add_med_btn.Name = "add_med_btn";
+            add_med_btn.Size = new Size(30, 24);
+            add_med_btn.TabIndex = 10;
+            add_med_btn.Text = "+";
+            add_med_btn.UseVisualStyleBackColor = true;
+            add_med_btn.Click += add_med_btn_Click;
             // 
             // cancel_btn
             // 
@@ -187,18 +202,6 @@
             label2.TabIndex = 0;
             label2.Text = "Название";
             // 
-            // rec_text
-            // 
-            rec_text.BackColor = Color.FromArgb(192, 255, 192);
-            rec_text.BorderStyle = BorderStyle.FixedSingle;
-            rec_text.Font = new Font("Arial", 10.1F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            rec_text.Location = new Point(15, 174);
-            rec_text.Margin = new Padding(2, 1, 2, 1);
-            rec_text.Name = "rec_text";
-            rec_text.Size = new Size(344, 65);
-            rec_text.TabIndex = 13;
-            rec_text.Text = "";
-            // 
             // EditIllnessForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -218,7 +221,7 @@
         private Panel panel1;
         private ListBox illness_list_box;
         private Button button2;
-        private Button button1;
+        private Button add_med_btn;
         private Button cancel_btn;
         private Label label5;
         private Button save_illness_btn;

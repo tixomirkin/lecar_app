@@ -33,7 +33,7 @@ namespace lecar_app.IllnessForms
         private void add_illness_btn_Click(object sender, EventArgs e)
         {
             using var db = new LecarAppContext();
-            var add_form = new AddIllnessForm(db.Illnesses.ToArray().Last().Id + 1);
+            var add_form = new AddIllnessForm();
             this.Hide();
             add_form.ShowDialog();
             this.Show();
@@ -46,7 +46,7 @@ namespace lecar_app.IllnessForms
 
             if (illness_list_box.SelectedItem != null)
             {
-                //using var db = new LecarAppContext();
+                using var db = new LecarAppContext();
                 Illness ill = (Illness)illness_list_box.SelectedItem;
 
                 panel_ill.Visible = true;
@@ -55,7 +55,17 @@ namespace lecar_app.IllnessForms
                 rec_text.Text = ill.Recommendations;
                 //rec_med_text.Text = ...
 
-                //db.Cons.Where(c => c.IdIllnes == ill.Id);
+                var cons_list = db.Cons.Where(c => c.IdIllnes == ill.Id).ToList();
+                String con_meds = "";
+                foreach (var cons in cons_list)
+                {
+                    var med = db.Medicaments.Find(cons.IdMedicament);
+                    if (med != null)
+                    {
+                        con_meds += med.Name + "\n";
+                    }
+                }
+                rec_med_text.Text = con_meds;
             }
 
         }

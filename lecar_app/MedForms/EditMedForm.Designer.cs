@@ -76,6 +76,7 @@
             // 
             // illness_list_box
             // 
+            illness_list_box.DisplayMember = "name";
             illness_list_box.FormattingEnabled = true;
             illness_list_box.ItemHeight = 15;
             illness_list_box.Location = new Point(15, 267);
@@ -94,6 +95,7 @@
             button2.TabIndex = 11;
             button2.Text = "-";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // add_med_btn
             // 
@@ -105,6 +107,7 @@
             add_med_btn.TabIndex = 10;
             add_med_btn.Text = "+";
             add_med_btn.UseVisualStyleBackColor = true;
+            add_med_btn.Click += add_med_btn_Click;
             // 
             // cancel_btn
             // 

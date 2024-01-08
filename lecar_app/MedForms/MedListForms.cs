@@ -49,12 +49,25 @@ namespace lecar_app.MedForms
         {
             if (med_list_box.SelectedItem != null)
             {
+                using var db = new LecarAppContext();
                 Medicament med = (Medicament)med_list_box.SelectedItem;
 
                 panel_med.Visible = true;
                 name_text.Text = med.Name;
                 active_substance_text.Text = med.ActiveSubstance;
                 med_counter.Value = Convert.ToDecimal(med.Count);
+
+                var cons_list = db.Cons.Where(c => c.IdMedicament == med.Id).ToList();
+                String con_ills = "";
+                foreach (var cons in cons_list)
+                {
+                    var ill = db.Illnesses.Find(cons.IdIllnes);
+                    if(ill != null)
+                    {
+                        con_ills += ill.Name + "\n";
+                    }
+                }
+                illness_text.Text = con_ills;
             }
         }
 
