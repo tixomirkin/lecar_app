@@ -8,4 +8,6 @@ public partial class Con
     public int IdIllnes { get; set; }
 
     public int IdMedicament { get; set; }
+
+    public int Id { get; set; }
 }// dsfsdf
