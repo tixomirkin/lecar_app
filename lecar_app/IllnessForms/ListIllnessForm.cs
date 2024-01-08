@@ -32,7 +32,8 @@ namespace lecar_app.IllnessForms
 
         private void add_illness_btn_Click(object sender, EventArgs e)
         {
-            var add_form = new AddIllnessForm();
+            using var db = new LecarAppContext();
+            var add_form = new AddIllnessForm(db.Illnesses.ToArray().Last().Id + 1);
             this.Hide();
             add_form.ShowDialog();
             this.Show();
