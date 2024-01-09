@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListIllnessForm));
             illness_list_box = new ListBox();
             illnessBindingSource = new BindingSource(components);
             search_text_box = new TextBox();
@@ -261,9 +262,11 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.Image = Properties.Resources.search;
             pictureBox1.Location = new Point(393, 64);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(71, 63);
+            pictureBox1.Size = new Size(53, 63);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
             // 
@@ -281,6 +284,7 @@
             Controls.Add(illness_list_box);
             Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 3, 4, 3);
             Name = "ListIllnessForm";
             Text = "База болезней";
