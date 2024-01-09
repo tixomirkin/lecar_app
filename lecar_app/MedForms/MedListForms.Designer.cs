@@ -284,7 +284,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 2, 4, 2);
             Name = "MedListForms";
-            Text = "MedListForms";
+            Text = "Список Лекарств";
             panel_med.ResumeLayout(false);
             panel_med.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)med_counter).EndInit();
