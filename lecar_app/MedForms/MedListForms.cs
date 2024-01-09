@@ -55,7 +55,7 @@ namespace lecar_app.MedForms
                 panel_med.Visible = true;
                 name_text.Text = med.Name;
                 active_substance_text.Text = med.ActiveSubstance;
-                med_counter.Value = Convert.ToDecimal(med.Count);
+                med_counter.Text = med.Count.ToString();
 
                 var cons_list = db.Cons.Where(c => c.IdMedicament == med.Id).ToList();
                 String con_ills = "";
@@ -126,9 +126,6 @@ namespace lecar_app.MedForms
             }
         }
 
-        private void med_counter_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

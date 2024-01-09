@@ -63,5 +63,10 @@ namespace lecar_app.MedForms
                 }
             }
         }
+
+        private void cancel_btn_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

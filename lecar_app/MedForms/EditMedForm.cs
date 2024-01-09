@@ -85,11 +85,16 @@ namespace lecar_app.MedForms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if(illness_list_box.SelectedItem != null)
+            if (illness_list_box.SelectedItem != null)
             {
                 var ill_to_del = illness_list_box.SelectedItem;
                 illness_list_box.Items.Remove(ill_to_del);
             }
+        }
+
+        private void cancel_btn_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

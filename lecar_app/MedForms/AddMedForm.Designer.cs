@@ -129,6 +129,7 @@
             cancel_btn.TabIndex = 9;
             cancel_btn.Text = "Отмена";
             cancel_btn.UseVisualStyleBackColor = true;
+            cancel_btn.Click += cancel_btn_Click;
             // 
             // label5
             // 
