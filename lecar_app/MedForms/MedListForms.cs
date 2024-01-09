@@ -62,7 +62,7 @@ namespace lecar_app.MedForms
                 foreach (var cons in cons_list)
                 {
                     var ill = db.Illnesses.Find(cons.IdIllnes);
-                    if(ill != null)
+                    if (ill != null)
                     {
                         con_ills += ill.Name + "\n";
                     }
@@ -124,6 +124,11 @@ namespace lecar_app.MedForms
             {
                 med_list_box.Items.Add(item);
             }
+        }
+
+        private void med_counter_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

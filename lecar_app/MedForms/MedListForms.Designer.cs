@@ -89,6 +89,7 @@
             med_counter.Name = "med_counter";
             med_counter.Size = new Size(80, 36);
             med_counter.TabIndex = 10;
+            med_counter.ValueChanged += med_counter_ValueChanged;
             // 
             // exit_btn
             // 
