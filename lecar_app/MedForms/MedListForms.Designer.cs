@@ -289,7 +289,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(2, 1, 2, 1);
             Name = "MedListForms";
-            Text = "MedListForms";
+            Text = "Список Лекарств";
             panel_med.ResumeLayout(false);
             panel_med.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
