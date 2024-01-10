@@ -13,7 +13,7 @@ namespace lecar_app.IllnessForms
 {
     public partial class AddConIllness : Form
     {
-        
+
         public List<Medicament> rec_med;
         public void reload_list()
         {
@@ -56,6 +56,28 @@ namespace lecar_app.IllnessForms
             med_list_box.SelectionMode = SelectionMode.One;
             this.ShowDialog();
             return rec_med.First();
+        }
+
+        private void search_text_box_TextChanged(object sender, EventArgs e)
+        {
+            med_list_box.ClearSelected();
+            reload_list();
+            var findlist = new List<Object>();
+            var find = med_list_box.FindString(search_text_box.Text);
+
+            while (find != -1)
+            {
+                findlist.Add(med_list_box.Items[find]);
+                med_list_box.Items.RemoveAt(find);
+                find = med_list_box.FindString(search_text_box.Text);
+            }
+
+            med_list_box.Items.Clear();
+
+            foreach (var item in findlist)
+            {
+                med_list_box.Items.Add(item);
+            }
         }
     }
 }

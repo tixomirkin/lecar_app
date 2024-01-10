@@ -19,11 +19,13 @@ public partial class LecarAppContext : DbContext
 
     public virtual DbSet<Illness> Illnesses { get; set; }
 
+    public virtual DbSet<Jurnal> Jurnals { get; set; }
+
     public virtual DbSet<Medicament> Medicaments { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlite("Data Source=V:\\LecarApp.db");
+        => optionsBuilder.UseSqlite("Data Source=V:\\\\\\\\LecarApp.db");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -44,6 +46,21 @@ public partial class LecarAppContext : DbContext
             entity.Property(e => e.Name).HasColumnName("name");
             entity.Property(e => e.Recommendations).HasColumnName("recommendations");
             entity.Property(e => e.Symptoms).HasColumnName("symptoms");
+        });
+
+        modelBuilder.Entity<Jurnal>(entity =>
+        {
+            entity.ToTable("jurnal");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Date)
+                .HasColumnType("timestamp")
+                .HasColumnName("date");
+            entity.Property(e => e.IllnesName).HasColumnName("illnes_name");
+            entity.Property(e => e.Name).HasColumnName("name");
+            entity.Property(e => e.OtherText).HasColumnName("other_text");
+            entity.Property(e => e.Recomends).HasColumnName("recomends");
+            entity.Property(e => e.Symtoms).HasColumnName("symtoms");
         });
 
         modelBuilder.Entity<Medicament>(entity =>

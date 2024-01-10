@@ -231,7 +231,7 @@
             // exit_btn
             // 
             exit_btn.Font = new Font("Arial", 9F);
-            exit_btn.Location = new Point(245, 742);
+            exit_btn.Location = new Point(245, 752);
             exit_btn.Margin = new Padding(4, 2, 4, 2);
             exit_btn.Name = "exit_btn";
             exit_btn.Size = new Size(208, 51);
@@ -255,7 +255,7 @@
             // add_med_btn
             // 
             add_med_btn.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            add_med_btn.Location = new Point(20, 742);
+            add_med_btn.Location = new Point(20, 752);
             add_med_btn.Margin = new Padding(15, 11, 15, 11);
             add_med_btn.Name = "add_med_btn";
             add_med_btn.Size = new Size(219, 51);
@@ -277,11 +277,13 @@
             // med_list_box
             // 
             med_list_box.DisplayMember = "name";
+            med_list_box.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             med_list_box.FormattingEnabled = true;
+            med_list_box.ItemHeight = 45;
             med_list_box.Location = new Point(20, 149);
             med_list_box.Margin = new Padding(4, 2, 4, 2);
             med_list_box.Name = "med_list_box";
-            med_list_box.Size = new Size(433, 580);
+            med_list_box.Size = new Size(433, 589);
             med_list_box.TabIndex = 8;
             med_list_box.ValueMember = "Id";
             med_list_box.SelectedIndexChanged += med_list_box_SelectedIndexChanged;
@@ -310,6 +312,7 @@
             Controls.Add(add_med_btn);
             Controls.Add(search_text_box);
             Controls.Add(med_list_box);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 2, 4, 2);
             Name = "MedListForms";

@@ -52,5 +52,11 @@ namespace lecar_app
         {
             Close();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            var jurnal_form = new JurnalForm();
+            jurnal_form.ShowDialog();
+        }
     }
 }

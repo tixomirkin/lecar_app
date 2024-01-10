@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditIllnessForm));
             panel1 = new Panel();
             rec_text = new RichTextBox();
             illness_list_box = new ListBox();
@@ -58,21 +59,21 @@
             panel1.Controls.Add(name_text);
             panel1.Controls.Add(symptoms_text);
             panel1.Controls.Add(label2);
-            panel1.Location = new Point(6, 6);
-            panel1.Margin = new Padding(2, 1, 2, 1);
+            panel1.Location = new Point(11, 13);
+            panel1.Margin = new Padding(4, 2, 4, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(368, 379);
+            panel1.Size = new Size(683, 809);
             panel1.TabIndex = 8;
             // 
             // rec_text
             // 
-            rec_text.BackColor = Color.FromArgb(192, 255, 192);
+            rec_text.BackColor = SystemColors.ControlLightLight;
             rec_text.BorderStyle = BorderStyle.FixedSingle;
             rec_text.Font = new Font("Arial", 10.1F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            rec_text.Location = new Point(15, 174);
-            rec_text.Margin = new Padding(2, 1, 2, 1);
+            rec_text.Location = new Point(28, 371);
+            rec_text.Margin = new Padding(4, 2, 4, 2);
             rec_text.Name = "rec_text";
-            rec_text.Size = new Size(344, 65);
+            rec_text.Size = new Size(635, 134);
             rec_text.TabIndex = 13;
             rec_text.Text = "";
             // 
@@ -80,20 +81,19 @@
             // 
             illness_list_box.DisplayMember = "name";
             illness_list_box.FormattingEnabled = true;
-            illness_list_box.ItemHeight = 15;
-            illness_list_box.Location = new Point(15, 267);
-            illness_list_box.Margin = new Padding(2, 1, 2, 1);
+            illness_list_box.Location = new Point(28, 570);
+            illness_list_box.Margin = new Padding(4, 2, 4, 2);
             illness_list_box.Name = "illness_list_box";
-            illness_list_box.Size = new Size(309, 64);
+            illness_list_box.Size = new Size(570, 132);
             illness_list_box.TabIndex = 12;
             // 
             // button2
             // 
             button2.Font = new Font("Arial", 9F);
-            button2.Location = new Point(326, 294);
-            button2.Margin = new Padding(2, 1, 2, 1);
+            button2.Location = new Point(605, 627);
+            button2.Margin = new Padding(4, 2, 4, 2);
             button2.Name = "button2";
-            button2.Size = new Size(30, 24);
+            button2.Size = new Size(56, 51);
             button2.TabIndex = 11;
             button2.Text = "-";
             button2.UseVisualStyleBackColor = true;
@@ -102,10 +102,10 @@
             // add_med_btn
             // 
             add_med_btn.Font = new Font("Arial", 9F);
-            add_med_btn.Location = new Point(326, 267);
-            add_med_btn.Margin = new Padding(2, 1, 2, 1);
+            add_med_btn.Location = new Point(605, 570);
+            add_med_btn.Margin = new Padding(4, 2, 4, 2);
             add_med_btn.Name = "add_med_btn";
-            add_med_btn.Size = new Size(30, 24);
+            add_med_btn.Size = new Size(56, 51);
             add_med_btn.TabIndex = 10;
             add_med_btn.Text = "+";
             add_med_btn.UseVisualStyleBackColor = true;
@@ -113,47 +113,51 @@
             // 
             // cancel_btn
             // 
+            cancel_btn.BackColor = Color.Orange;
             cancel_btn.Font = new Font("Arial", 9F);
-            cancel_btn.Location = new Point(244, 340);
-            cancel_btn.Margin = new Padding(2, 1, 2, 1);
+            cancel_btn.ForeColor = SystemColors.ControlLightLight;
+            cancel_btn.Location = new Point(453, 725);
+            cancel_btn.Margin = new Padding(4, 2, 4, 2);
             cancel_btn.Name = "cancel_btn";
-            cancel_btn.Size = new Size(112, 24);
+            cancel_btn.Size = new Size(208, 51);
             cancel_btn.TabIndex = 9;
             cancel_btn.Text = "Отмена";
-            cancel_btn.UseVisualStyleBackColor = true;
+            cancel_btn.UseVisualStyleBackColor = false;
             cancel_btn.Click += cancel_btn_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label5.Location = new Point(12, 247);
-            label5.Margin = new Padding(2, 0, 2, 0);
+            label5.Location = new Point(22, 527);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(162, 15);
+            label5.Size = new Size(315, 27);
             label5.TabIndex = 7;
             label5.Text = "Рекомендуемые лекарства";
             // 
             // save_illness_btn
             // 
+            save_illness_btn.BackColor = Color.LimeGreen;
             save_illness_btn.Font = new Font("Arial", 9F);
-            save_illness_btn.Location = new Point(128, 340);
-            save_illness_btn.Margin = new Padding(2, 1, 2, 1);
+            save_illness_btn.ForeColor = SystemColors.ControlLightLight;
+            save_illness_btn.Location = new Point(238, 725);
+            save_illness_btn.Margin = new Padding(4, 2, 4, 2);
             save_illness_btn.Name = "save_illness_btn";
-            save_illness_btn.Size = new Size(112, 24);
+            save_illness_btn.Size = new Size(208, 51);
             save_illness_btn.TabIndex = 4;
             save_illness_btn.Text = "Сохранить";
-            save_illness_btn.UseVisualStyleBackColor = true;
+            save_illness_btn.UseVisualStyleBackColor = false;
             save_illness_btn.Click += save_illness_btn_Click;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label4.Location = new Point(12, 158);
-            label4.Margin = new Padding(2, 0, 2, 0);
+            label4.Location = new Point(22, 337);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(167, 15);
+            label4.Size = new Size(323, 27);
             label4.TabIndex = 5;
             label4.Text = "Рекомендуемые процедуры";
             // 
@@ -161,10 +165,10 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label3.Location = new Point(12, 67);
-            label3.Margin = new Padding(2, 0, 2, 0);
+            label3.Location = new Point(22, 143);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(69, 15);
+            label3.Size = new Size(130, 27);
             label3.TabIndex = 3;
             label3.Text = "Симптомы";
             // 
@@ -172,22 +176,22 @@
             // 
             name_text.BorderStyle = BorderStyle.FixedSingle;
             name_text.Font = new Font("Arial", 16.1F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            name_text.Location = new Point(15, 35);
-            name_text.Margin = new Padding(2, 1, 2, 1);
+            name_text.Location = new Point(28, 75);
+            name_text.Margin = new Padding(4, 2, 4, 2);
             name_text.Name = "name_text";
-            name_text.Size = new Size(344, 29);
+            name_text.Size = new Size(635, 57);
             name_text.TabIndex = 2;
             name_text.Text = "";
             // 
             // symptoms_text
             // 
-            symptoms_text.BackColor = Color.FromArgb(192, 255, 192);
+            symptoms_text.BackColor = SystemColors.ControlLightLight;
             symptoms_text.BorderStyle = BorderStyle.FixedSingle;
             symptoms_text.Font = new Font("Arial", 10.1F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            symptoms_text.Location = new Point(15, 87);
-            symptoms_text.Margin = new Padding(2, 1, 2, 1);
+            symptoms_text.Location = new Point(28, 186);
+            symptoms_text.Margin = new Padding(4, 2, 4, 2);
             symptoms_text.Name = "symptoms_text";
-            symptoms_text.Size = new Size(344, 65);
+            symptoms_text.Size = new Size(635, 134);
             symptoms_text.TabIndex = 1;
             symptoms_text.Text = "";
             // 
@@ -195,20 +199,22 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label2.Location = new Point(12, 17);
-            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Location = new Point(22, 36);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(63, 15);
+            label2.Size = new Size(118, 27);
             label2.TabIndex = 0;
             label2.Text = "Название";
             // 
             // EditIllnessForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(380, 390);
+            ClientSize = new Size(706, 832);
             Controls.Add(panel1);
-            Margin = new Padding(2, 1, 2, 1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(4, 2, 4, 2);
             Name = "EditIllnessForm";
             Text = "Редактирование заболевания";
             panel1.ResumeLayout(false);

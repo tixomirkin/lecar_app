@@ -37,7 +37,6 @@
             del_illness_btn = new Button();
             label1 = new Label();
             panel_ill = new Panel();
-            exit_btn = new Button();
             edit_illness_btn = new Button();
             label5 = new Label();
             rec_med_text = new RichTextBox();
@@ -47,6 +46,7 @@
             name_text = new RichTextBox();
             symptoms_text = new RichTextBox();
             label2 = new Label();
+            exit_btn = new Button();
             label6 = new Label();
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)illnessBindingSource).BeginInit();
@@ -87,7 +87,7 @@
             add_illness_btn.Location = new Point(31, 736);
             add_illness_btn.Margin = new Padding(14, 11, 14, 11);
             add_illness_btn.Name = "add_illness_btn";
-            add_illness_btn.Size = new Size(433, 52);
+            add_illness_btn.Size = new Size(216, 52);
             add_illness_btn.TabIndex = 3;
             add_illness_btn.Text = "Добавить";
             add_illness_btn.UseVisualStyleBackColor = true;
@@ -95,14 +95,16 @@
             // 
             // del_illness_btn
             // 
+            del_illness_btn.BackColor = Color.LightCoral;
             del_illness_btn.Font = new Font("Arial", 9F);
-            del_illness_btn.Location = new Point(22, 731);
+            del_illness_btn.ForeColor = SystemColors.ControlLightLight;
+            del_illness_btn.Location = new Point(241, 731);
             del_illness_btn.Margin = new Padding(4, 3, 4, 3);
             del_illness_btn.Name = "del_illness_btn";
             del_illness_btn.Size = new Size(208, 52);
             del_illness_btn.TabIndex = 4;
             del_illness_btn.Text = "Удалить";
-            del_illness_btn.UseVisualStyleBackColor = true;
+            del_illness_btn.UseVisualStyleBackColor = false;
             del_illness_btn.Click += del_illness_btn_Click;
             // 
             // label1
@@ -118,7 +120,7 @@
             // 
             // panel_ill
             // 
-            panel_ill.Controls.Add(exit_btn);
+            panel_ill.BackColor = SystemColors.ControlLightLight;
             panel_ill.Controls.Add(edit_illness_btn);
             panel_ill.Controls.Add(label5);
             panel_ill.Controls.Add(del_illness_btn);
@@ -135,28 +137,18 @@
             panel_ill.TabIndex = 6;
             panel_ill.Visible = false;
             // 
-            // exit_btn
-            // 
-            exit_btn.Font = new Font("Arial", 9F);
-            exit_btn.Location = new Point(454, 731);
-            exit_btn.Margin = new Padding(4, 3, 4, 3);
-            exit_btn.Name = "exit_btn";
-            exit_btn.Size = new Size(208, 52);
-            exit_btn.TabIndex = 9;
-            exit_btn.Text = "Закрыть";
-            exit_btn.UseVisualStyleBackColor = true;
-            exit_btn.Click += exit_btn_Click;
-            // 
             // edit_illness_btn
             // 
+            edit_illness_btn.BackColor = Color.Orange;
             edit_illness_btn.Font = new Font("Arial", 9F);
-            edit_illness_btn.Location = new Point(238, 731);
+            edit_illness_btn.ForeColor = SystemColors.ControlLightLight;
+            edit_illness_btn.Location = new Point(457, 731);
             edit_illness_btn.Margin = new Padding(4, 3, 4, 3);
             edit_illness_btn.Name = "edit_illness_btn";
             edit_illness_btn.Size = new Size(208, 52);
             edit_illness_btn.TabIndex = 8;
             edit_illness_btn.Text = "Редактировать";
-            edit_illness_btn.UseVisualStyleBackColor = true;
+            edit_illness_btn.UseVisualStyleBackColor = false;
             edit_illness_btn.Click += edit_illness_btn_Click;
             // 
             // label5
@@ -171,7 +163,7 @@
             // 
             // rec_med_text
             // 
-            rec_med_text.BackColor = Color.FromArgb(192, 255, 192);
+            rec_med_text.BackColor = Color.WhiteSmoke;
             rec_med_text.BorderStyle = BorderStyle.None;
             rec_med_text.Font = new Font("Arial", 10.1F, FontStyle.Regular, GraphicsUnit.Point, 204);
             rec_med_text.HideSelection = false;
@@ -180,7 +172,7 @@
             rec_med_text.ReadOnly = true;
             rec_med_text.Size = new Size(635, 134);
             rec_med_text.TabIndex = 6;
-            rec_med_text.Text = "эта хуйня пока не робит лол";
+            rec_med_text.Text = "лекарства";
             // 
             // label4
             // 
@@ -194,7 +186,7 @@
             // 
             // rec_text
             // 
-            rec_text.BackColor = Color.FromArgb(192, 255, 192);
+            rec_text.BackColor = Color.WhiteSmoke;
             rec_text.BorderStyle = BorderStyle.None;
             rec_text.Font = new Font("Arial", 10.1F, FontStyle.Regular, GraphicsUnit.Point, 204);
             rec_text.HideSelection = false;
@@ -217,8 +209,10 @@
             // 
             // name_text
             // 
+            name_text.BackColor = SystemColors.ControlLightLight;
             name_text.BorderStyle = BorderStyle.None;
             name_text.Font = new Font("Arial", 16.1F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            name_text.ForeColor = Color.DarkOliveGreen;
             name_text.HideSelection = false;
             name_text.Location = new Point(27, 75);
             name_text.Name = "name_text";
@@ -229,7 +223,7 @@
             // 
             // symptoms_text
             // 
-            symptoms_text.BackColor = Color.FromArgb(192, 255, 192);
+            symptoms_text.BackColor = Color.WhiteSmoke;
             symptoms_text.BorderStyle = BorderStyle.None;
             symptoms_text.Font = new Font("Arial", 10.1F, FontStyle.Regular, GraphicsUnit.Point, 204);
             symptoms_text.HideSelection = false;
@@ -249,6 +243,18 @@
             label2.Size = new Size(118, 27);
             label2.TabIndex = 0;
             label2.Text = "Название";
+            // 
+            // exit_btn
+            // 
+            exit_btn.Font = new Font("Arial", 9F);
+            exit_btn.Location = new Point(256, 736);
+            exit_btn.Margin = new Padding(4, 3, 4, 3);
+            exit_btn.Name = "exit_btn";
+            exit_btn.Size = new Size(208, 52);
+            exit_btn.TabIndex = 9;
+            exit_btn.Text = "Закрыть";
+            exit_btn.UseVisualStyleBackColor = true;
+            exit_btn.Click += exit_btn_Click;
             // 
             // label6
             // 
@@ -275,6 +281,7 @@
             AutoScaleDimensions = new SizeF(18F, 36F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1188, 825);
+            Controls.Add(exit_btn);
             Controls.Add(pictureBox1);
             Controls.Add(label6);
             Controls.Add(panel_ill);
@@ -283,7 +290,7 @@
             Controls.Add(search_text_box);
             Controls.Add(illness_list_box);
             Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 3, 4, 3);
             Name = "ListIllnessForm";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddMedForm));
             panel1 = new Panel();
             med_counter = new NumericUpDown();
             label1 = new Label();
@@ -209,6 +210,8 @@
             BackColor = SystemColors.ButtonFace;
             ClientSize = new Size(711, 789);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 2, 4, 2);
             Name = "AddMedForm";
             Text = "AddMedForm";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenuForm));
             illness_btn = new Button();
             med_btn = new Button();
             button3 = new Button();
@@ -39,7 +40,7 @@
             // 
             // illness_btn
             // 
-            illness_btn.Location = new Point(19, 432);
+            illness_btn.Location = new Point(18, 311);
             illness_btn.Margin = new Padding(4);
             illness_btn.Name = "illness_btn";
             illness_btn.Size = new Size(492, 61);
@@ -50,7 +51,7 @@
             // 
             // med_btn
             // 
-            med_btn.Location = new Point(19, 512);
+            med_btn.Location = new Point(18, 391);
             med_btn.Margin = new Padding(4);
             med_btn.Name = "med_btn";
             med_btn.Size = new Size(492, 61);
@@ -61,7 +62,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(19, 596);
+            button3.Location = new Point(18, 475);
             button3.Margin = new Padding(4);
             button3.Name = "button3";
             button3.Size = new Size(242, 61);
@@ -72,7 +73,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(269, 596);
+            button4.Location = new Point(268, 475);
             button4.Margin = new Padding(4);
             button4.Name = "button4";
             button4.Size = new Size(242, 61);
@@ -83,7 +84,7 @@
             // 
             // add_jurnal_btn
             // 
-            add_jurnal_btn.Location = new Point(19, 276);
+            add_jurnal_btn.Location = new Point(18, 155);
             add_jurnal_btn.Margin = new Padding(4);
             add_jurnal_btn.Name = "add_jurnal_btn";
             add_jurnal_btn.Size = new Size(492, 61);
@@ -94,21 +95,23 @@
             // 
             // button6
             // 
-            button6.Location = new Point(19, 357);
+            button6.Location = new Point(18, 236);
             button6.Margin = new Padding(4);
             button6.Name = "button6";
             button6.Size = new Size(492, 61);
             button6.TabIndex = 5;
             button6.Text = "Журнал";
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(130, 53);
+            label1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label1.Location = new Point(30, 58);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(287, 36);
+            label1.Size = new Size(477, 56);
             label1.TabIndex = 6;
             label1.Text = "Добро пожаловать";
             // 
@@ -117,7 +120,7 @@
             AutoScaleDimensions = new SizeF(192F, 192F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(533, 682);
+            ClientSize = new Size(533, 563);
             Controls.Add(label1);
             Controls.Add(button6);
             Controls.Add(add_jurnal_btn);
@@ -126,10 +129,12 @@
             Controls.Add(med_btn);
             Controls.Add(illness_btn);
             Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4);
             Name = "MainMenuForm";
-            Text = "MainMenuForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Главное меню";
             ResumeLayout(false);
             PerformLayout();
         }

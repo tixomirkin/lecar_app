@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            other_text = new TabControl();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JurnalAddForm));
+            jjj = new TabControl();
             tabPage2 = new TabPage();
             med_list = new ListBox();
             label6 = new Label();
             rect_text = new RichTextBox();
             tabPage3 = new TabPage();
-            richTextBox3 = new RichTextBox();
+            other_text = new RichTextBox();
             name_text = new TextBox();
             label3 = new Label();
             label1 = new Label();
@@ -47,20 +48,20 @@
             syptoms_text = new RichTextBox();
             save_btn = new Button();
             cancel_btn = new Button();
-            other_text.SuspendLayout();
+            jjj.SuspendLayout();
             tabPage2.SuspendLayout();
             tabPage3.SuspendLayout();
             SuspendLayout();
             // 
-            // other_text
+            // jjj
             // 
-            other_text.Controls.Add(tabPage2);
-            other_text.Controls.Add(tabPage3);
-            other_text.Location = new Point(568, 12);
-            other_text.Name = "other_text";
-            other_text.SelectedIndex = 0;
-            other_text.Size = new Size(695, 737);
-            other_text.TabIndex = 0;
+            jjj.Controls.Add(tabPage2);
+            jjj.Controls.Add(tabPage3);
+            jjj.Location = new Point(568, 12);
+            jjj.Name = "jjj";
+            jjj.SelectedIndex = 0;
+            jjj.Size = new Size(695, 737);
+            jjj.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -106,22 +107,22 @@
             // 
             // tabPage3
             // 
-            tabPage3.Controls.Add(richTextBox3);
-            tabPage3.Location = new Point(8, 50);
+            tabPage3.Controls.Add(other_text);
+            tabPage3.Location = new Point(8, 46);
             tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(679, 679);
+            tabPage3.Size = new Size(679, 683);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Примечания";
             tabPage3.UseVisualStyleBackColor = true;
             // 
-            // richTextBox3
+            // other_text
             // 
-            richTextBox3.Dock = DockStyle.Fill;
-            richTextBox3.Location = new Point(0, 0);
-            richTextBox3.Name = "richTextBox3";
-            richTextBox3.Size = new Size(679, 679);
-            richTextBox3.TabIndex = 2;
-            richTextBox3.Text = "";
+            other_text.Dock = DockStyle.Fill;
+            other_text.Location = new Point(0, 0);
+            other_text.Name = "other_text";
+            other_text.Size = new Size(679, 683);
+            other_text.TabIndex = 2;
+            other_text.Text = "";
             // 
             // name_text
             // 
@@ -229,6 +230,7 @@
             save_btn.TabIndex = 14;
             save_btn.Text = "Добавить";
             save_btn.UseVisualStyleBackColor = false;
+            save_btn.Click += save_btn_Click;
             // 
             // cancel_btn
             // 
@@ -242,6 +244,7 @@
             cancel_btn.TabIndex = 15;
             cancel_btn.Text = "Отмена";
             cancel_btn.UseVisualStyleBackColor = false;
+            cancel_btn.Click += cancel_btn_Click;
             // 
             // JurnalAddForm
             // 
@@ -260,12 +263,14 @@
             Controls.Add(label1);
             Controls.Add(label3);
             Controls.Add(name_text);
-            Controls.Add(other_text);
+            Controls.Add(jjj);
             Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 3, 4, 3);
             Name = "JurnalAddForm";
             Text = "JurnalAddForm";
-            other_text.ResumeLayout(false);
+            jjj.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
             tabPage3.ResumeLayout(false);
@@ -275,7 +280,7 @@
 
         #endregion
 
-        private TabControl other_text;
+        private TabControl jjj;
         private TabPage tabPage2;
         private TextBox name_text;
         private Label label3;
@@ -286,7 +291,7 @@
         private DateTimePicker date_pick;
         private RichTextBox rect_text;
         private TabPage tabPage3;
-        private RichTextBox richTextBox3;
+        private RichTextBox other_text;
         private Label label4;
         private Label label5;
         private Label label6;

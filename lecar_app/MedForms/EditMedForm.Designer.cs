@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditMedForm));
             panel1 = new Panel();
             med_counter = new NumericUpDown();
             illness_list_box = new ListBox();
@@ -211,6 +212,8 @@
             BackColor = SystemColors.ButtonFace;
             ClientSize = new Size(708, 800);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 2, 4, 2);
             Name = "EditMedForm";
             Text = "EditMedForm";

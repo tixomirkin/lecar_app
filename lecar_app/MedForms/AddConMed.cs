@@ -54,7 +54,33 @@ namespace lecar_app.MedForms
         {
             ill_list_box.SelectionMode = SelectionMode.One;
             this.ShowDialog();
+            if (con_ill.Count == 0)
+            {
+                return null;
+            }
             return con_ill.First();
+        }
+
+        private void search_text_box_TextChanged(object sender, EventArgs e)
+        {
+            ill_list_box.ClearSelected();
+            reload_list();
+            var findlist = new List<Object>();
+            var find = ill_list_box.FindString(search_text_box.Text);
+
+            while (find != -1)
+            {
+                findlist.Add(ill_list_box.Items[find]);
+                ill_list_box.Items.RemoveAt(find);
+                find = ill_list_box.FindString(search_text_box.Text);
+            }
+
+            ill_list_box.Items.Clear();
+
+            foreach (var item in findlist)
+            {
+                ill_list_box.Items.Add(item);
+            }
         }
     }
 }
