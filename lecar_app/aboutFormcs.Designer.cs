@@ -92,8 +92,8 @@
             // 
             // aboutFormcs
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleDimensions = new SizeF(192F, 192F);
+            AutoScaleMode = AutoScaleMode.Dpi;
             ClientSize = new Size(593, 556);
             Controls.Add(label4);
             Controls.Add(pictureBox1);

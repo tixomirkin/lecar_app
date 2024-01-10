@@ -13,9 +13,9 @@ namespace lecar_app
 
         public Database()
         {
-            connection = new SqliteConnection("Data Source=Y:\\LecarApp.db");
-            connection.Open();
-            //MessageBox.Show("Unable to save file, try again.");
+            //connection = new SqliteConnection("Data Source=Y:\\LecarApp.db");
+            //connection.Open();
+            MessageBox.Show("Unable to save file, try again.");
         }
 
         ~Database()

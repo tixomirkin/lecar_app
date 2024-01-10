@@ -104,9 +104,9 @@
             // tabPage3
             // 
             tabPage3.Controls.Add(richTextBox3);
-            tabPage3.Location = new Point(8, 50);
+            tabPage3.Location = new Point(8, 46);
             tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(705, 679);
+            tabPage3.Size = new Size(705, 683);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Примечания";
             tabPage3.UseVisualStyleBackColor = true;
@@ -116,7 +116,7 @@
             richTextBox3.Dock = DockStyle.Fill;
             richTextBox3.Location = new Point(0, 0);
             richTextBox3.Name = "richTextBox3";
-            richTextBox3.Size = new Size(705, 679);
+            richTextBox3.Size = new Size(705, 683);
             richTextBox3.TabIndex = 2;
             richTextBox3.Text = "";
             // 

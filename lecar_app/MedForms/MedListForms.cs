@@ -126,6 +126,27 @@ namespace lecar_app.MedForms
             }
         }
 
-        
+        private void analog_btn_Click(object sender, EventArgs e)
+        {
+            string analog_str = "Список аналогов на основе активного вещества:\n";
+
+            if (med_list_box.SelectedItem != null)
+            {
+                Medicament sel_med = (Medicament)med_list_box.SelectedItem;
+
+
+                using var db = new LecarAppContext();
+                var list_med = db.Medicaments.ToList();
+                foreach (var med in list_med)
+                {
+                    if (med.ActiveSubstance.ToLower().Contains(sel_med.ActiveSubstance.ToLower()) && med.Id != sel_med.Id) 
+                    {
+                        analog_str += "- " + med.Name + "\n";
+                    }
+                }
+
+                MessageBox.Show(analog_str);
+            }
+        }
     }
 }

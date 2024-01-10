@@ -108,16 +108,16 @@
             label1.Location = new Point(130, 53);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(146, 18);
+            label1.Size = new Size(287, 36);
             label1.TabIndex = 6;
             label1.Text = "Добро пожаловать";
             // 
             // MainMenuForm
             // 
-            AutoScaleDimensions = new SizeF(9F, 18F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleDimensions = new SizeF(192F, 192F);
+            AutoScaleMode = AutoScaleMode.Dpi;
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(538, 685);
+            ClientSize = new Size(533, 682);
             Controls.Add(label1);
             Controls.Add(button6);
             Controls.Add(add_jurnal_btn);
