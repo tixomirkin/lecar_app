@@ -44,10 +44,18 @@ namespace lecar_app.IllnessForms
             this.Close();
 
         }
-        public List<Medicament> show_form()
+        public List<Medicament> get_list_med()
         {
+            med_list_box.SelectionMode = SelectionMode.MultiSimple;
             this.ShowDialog();
             return rec_med;
+        }
+
+        public Medicament get_med()
+        {
+            med_list_box.SelectionMode = SelectionMode.One;
+            this.ShowDialog();
+            return rec_med.First();
         }
     }
 }

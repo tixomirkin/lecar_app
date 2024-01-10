@@ -49,5 +49,12 @@ namespace lecar_app.MedForms
             this.ShowDialog();
             return con_ill;
         }
+
+        public Illness get_ill()
+        {
+            ill_list_box.SelectionMode = SelectionMode.One;
+            this.ShowDialog();
+            return con_ill.First();
+        }
     }
 }

@@ -175,7 +175,7 @@
             illness_text.ReadOnly = true;
             illness_text.Size = new Size(635, 134);
             illness_text.TabIndex = 4;
-            illness_text.Text = "";
+            illness_text.Text = "Заболевания";
             // 
             // label3
             // 
@@ -201,7 +201,7 @@
             name_text.ReadOnly = true;
             name_text.Size = new Size(635, 58);
             name_text.TabIndex = 2;
-            name_text.Text = "name";
+            name_text.Text = "Название лекарства";
             // 
             // active_substance_text
             // 
@@ -215,7 +215,7 @@
             active_substance_text.ReadOnly = true;
             active_substance_text.Size = new Size(635, 134);
             active_substance_text.TabIndex = 1;
-            active_substance_text.Text = "";
+            active_substance_text.Text = "Активное вещество";
             // 
             // label2
             // 

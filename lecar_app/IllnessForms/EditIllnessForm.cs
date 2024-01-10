@@ -73,7 +73,7 @@ namespace lecar_app.IllnessForms
         {
             using var db = new LecarAppContext();
             var add_con_form = new AddConIllness();
-            var med_list = add_con_form.show_form();
+            var med_list = add_con_form.get_list_med();
             List<int> old_med_list = new List<int>();
             foreach (var temp in illness_list_box.Items)
             {

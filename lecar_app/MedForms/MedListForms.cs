@@ -128,7 +128,7 @@ namespace lecar_app.MedForms
 
         private void analog_btn_Click(object sender, EventArgs e)
         {
-            string analog_str = "Список аналогов на основе активного вещества:\n";
+            string analog_str = "";
 
             if (med_list_box.SelectedItem != null)
             {
@@ -145,7 +145,14 @@ namespace lecar_app.MedForms
                     }
                 }
 
-                MessageBox.Show(analog_str);
+                if (analog_str == "")
+                {
+                    MessageBox.Show("Аналоги не найденны!");
+                }
+                else
+                {
+                    MessageBox.Show("Список аналогов на основе активного вещества:\n" + analog_str);
+                }
             }
         }
     }
